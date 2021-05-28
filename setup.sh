@@ -59,19 +59,20 @@ echo "Entering workdir '$workdir'"
 mkdir "$workdir" && pushd "$workdir"
 
 # Update APT cache
-sudo apt update
+echo "Updating APT cache"
+sudo apt -qq update
 
 # Install APT packages
 echo "Installing APT packages"
-sudo apt install -y $apt_packages
+sudo apt -qq install -y $apt_packages
 
 # Uninstall useless software
-echo "Uninstalling crapware"
-sudo apt purge -y --autoremove $crapware
+echo "Uninstalling APT crapware"
+sudo apt -qq purge -y --autoremove $crapware
 
 # Upgrade packages
-echo "Upgrading packages"
-sudo apt upgrade -y
+echo "Upgrading APT packages"
+sudo apt -qq upgrade -y
 
 # Flatpak
 echo "Setting up Flatpak"
@@ -92,14 +93,15 @@ tar -xf jb-toolbox.tar.gz
 tar -xf netextender.tar.gz
 
 echo "Installing custom software"
-sudo apt install -y ./hamachi.deb
-sudo apt install -y ./teamviewer.deb
-sudo apt install -y ./insync.deb
+sudo apt -qq install -y ./hamachi.deb
+sudo apt -qq install -y ./teamviewer.deb
+sudo apt -qq install -y ./insync.deb
 jetbrains-toolbox*/jetbrains-toolbox
 pushd netExtenderClient
 sudo ./install
 popd
 
 # Cleanup
+echo "Cleaning up"
 popd
 rm -rf "$workdir"
