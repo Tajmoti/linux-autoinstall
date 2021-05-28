@@ -20,7 +20,7 @@ d-i netcfg/get_domain string unassigned-domain
 # If you select ftp, the mirror/country string does not need to be set.
 #d-i mirror/protocol string ftp
 d-i mirror/country string manual
-d-i mirror/http/hostname string merlin.vutbr.cz
+d-i mirror/http/hostname string merlin.fit.vutbr.cz
 d-i mirror/http/directory string /debian
 d-i mirror/http/proxy string
 
