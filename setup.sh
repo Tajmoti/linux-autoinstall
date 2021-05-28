@@ -23,7 +23,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 wget https://www.jetbrains.com/toolbox-app/download/download-thanks.html?platform=linux
 
 echo "Installing flatpaks"
-flatpak install $flatpaks
+flatpak install -y $flatpaks
 
 # Steam
 sudo apt install -y steam
