@@ -6,6 +6,7 @@ workdir="/tmp/tajmoinstall"
 # Software URLs
 hamachi_url="https://www.vpn.net/installers/logmein-hamachi_2.1.0.203-1_amd64.deb"
 insync_url="https://d2t3ff60b2tol4.cloudfront.net/builds/insync_3.4.0.40973-buster_amd64.deb"
+jb_toolbox_url="https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.20.8352.tar.gz"
 netextender_url="https://software.sonicwall.com/NetExtender/NetExtender.Linux-10.2.824.x86_64.tgz"
 
 # Commands
@@ -90,7 +91,7 @@ echo "Downloading custom software"
 $cmd_wget -O hamachi.deb "$hamachi_url"
 $cmd_wget -O teamviewer.deb https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 $cmd_wget -O insync.deb "$insync_url"
-$cmd_wget -O jb-toolbox.tar.gz https://www.jetbrains.com/toolbox-app/download/download-thanks.html?platform=linux
+$cmd_wget -O jb-toolbox.tar.gz "$jb_toolbox_url"
 $cmd_wget -O netextender.tar.gz "$netextender_url"
 
 echo "Unpacking custom software"
