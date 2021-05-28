@@ -67,11 +67,11 @@ sudo apt install -y $apt_packages
 
 # Uninstall useless software
 echo "Uninstalling crapware"
-sudo apt purge --autoremove $crapware
+sudo apt purge -y --autoremove $crapware
 
 # Upgrade packages
 echo "Upgrading packages"
-sudo apt upgrade
+sudo apt upgrade -y
 
 # Flatpak
 echo "Setting up Flatpak"
