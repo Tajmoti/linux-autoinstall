@@ -36,6 +36,7 @@ com.valvesoftware.Steam \
 org.chromium.Chromium \
 org.videolan.VLC \
 org.flameshot.Flameshot \
+us.zoom.Zoom \
 "
 
 # APT packages to purge
