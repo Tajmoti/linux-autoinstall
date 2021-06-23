@@ -13,8 +13,10 @@ cmake \
 docker \
 flatpak \
 gnome-software-plugin-flatpak \
+libccid \
 meld \
 openjdk-11-jre \
+opensc \
 vim \
 virt-manager \
 "
