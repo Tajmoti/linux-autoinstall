@@ -9,11 +9,16 @@ cmd_apt="apt -qq -o=Dpkg::Use-Pty=0"
 
 # APT packages to install
 apt_packages="\
+apt-transport-https \
+ca-certificates \
+curl \
 cmake \
-docker \
+docker-ce \
 flatpak \
 gnome-software-plugin-flatpak \
+gnupg \
 libccid \
+lsb-release \
 meld \
 openjdk-11-jre \
 opensc \
@@ -73,6 +78,11 @@ netextender_url="https://software.sonicwall.com/NetExtender/NetExtender.Linux-10
 echo "Entering workdir '$workdir'"
 rm -rf "$workdir" && mkdir "$workdir" && pushd "$workdir"
 
+# APT preparations
+echo "Setting up APT keys and repositories"
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null 
+
 # Update APT cache
 echo "Updating APT cache"
 sudo $cmd_apt update
@@ -121,6 +131,10 @@ jetbrains-toolbox*/jetbrains-toolbox
 pushd netExtenderClient
 sudo ./install
 popd
+
+echo "Setting up docker"
+sudo groupadd docker
+sudo usermod -aG docker ${USER}
 
 # Cleanup
 echo "Cleaning up"
