@@ -1,5 +1,7 @@
 #!/bin/bash
 
+script_dir="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
 # Location for temporary install files
 workdir="/tmp/tajmoinstall"
 
@@ -135,6 +137,12 @@ popd
 echo "Setting up docker"
 sudo groupadd docker
 sudo usermod -aG docker ${USER}
+
+echo "Setting up environment"
+souce "$script_dir/env.sh"
+
+echo "Setting up ADB"
+source "$script_dir/adb-udev.sh"
 
 # Cleanup
 echo "Cleaning up"
