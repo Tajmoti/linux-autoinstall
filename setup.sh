@@ -10,59 +10,13 @@ cmd_wget="wget -q"
 cmd_apt="apt -qq -o=Dpkg::Use-Pty=0"
 
 # APT packages to install
-apt_packages="\
-apt-transport-https \
-ca-certificates \
-curl \
-cmake \
-docker-ce \
-flatpak \
-gnome-software-plugin-flatpak \
-gnupg \
-libccid \
-lsb-release \
-meld \
-openjdk-11-jre \
-opensc \
-vim \
-virt-manager \
-"
+apt_packages="$(cat config/apt-install.txt)"
 
 # Flatpaks to install (mostly from FlatHub)
-flatpaks="\
-com.discordapp.Discord \
-com.github.PintaProject.Pinta \
-com.github.ztefn.haguichi \
-com.microsoft.Teams \
-com.slack.Slack \
-com.spotify.Client \
-com.valvesoftware.Steam \
-org.chromium.Chromium \
-org.videolan.VLC \
-org.flameshot.Flameshot \
-us.zoom.Zoom \
-"
+flatpaks="$(cat config/flatpak-install.txt)"
 
 # APT packages to purge
-crapware="\
-evolution \
-gnome-calendar \
-gnome-contacts \
-gnome-clocks \
-gnome-documents \
-gnome-games \
-gnome-maps \
-gnome-music \
-gnome-todo \
-gnome-weather \
-malcontent \
-rhythmbox \
-shotwell \
-synaptic \
-totem \
-xterm \
-yelp \
-"
+crapware="$(cat config/apt-purge.txt)"
 
 # DEB software URLs
 deb_urls="https://www.vpn.net/installers/logmein-hamachi_2.1.0.203-1_amd64.deb \
@@ -139,10 +93,10 @@ sudo groupadd docker
 sudo usermod -aG docker ${USER}
 
 echo "Setting up environment"
-souce "$script_dir/env.sh"
+souce "$script_dir/module/env.sh"
 
 echo "Setting up ADB"
-source "$script_dir/adb-udev.sh"
+source "$script_dir/module/adb-udev.sh"
 
 # Cleanup
 echo "Cleaning up"

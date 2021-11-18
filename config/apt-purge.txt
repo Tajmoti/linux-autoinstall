@@ -1,0 +1,17 @@
+evolution
+gnome-calendar
+gnome-contacts
+gnome-clocks
+gnome-documents
+gnome-games
+gnome-maps
+gnome-music
+gnome-todo
+gnome-weather
+malcontent
+rhythmbox
+shotwell
+synaptic
+totem
+xterm
+yelp

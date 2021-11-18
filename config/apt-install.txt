@@ -1,0 +1,16 @@
+apt-transport-https
+ca-certificates
+curl
+cmake
+docker-ce
+flatpak
+gnome-software-plugin-flatpak
+gnupg
+libccid
+lsb-release
+meld
+nohang
+openjdk-11-jre
+opensc
+vim
+virt-manager

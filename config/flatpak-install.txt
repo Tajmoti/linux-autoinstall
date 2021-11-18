@@ -1,0 +1,11 @@
+com.discordapp.Discord
+com.github.PintaProject.Pinta
+com.github.ztefn.haguichi
+com.microsoft.Teams
+com.slack.Slack
+com.spotify.Client
+com.valvesoftware.Steam
+org.chromium.Chromium
+org.videolan.VLC
+org.flameshot.Flameshot
+us.zoom.Zoom
