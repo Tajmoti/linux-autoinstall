@@ -6,6 +6,6 @@ com.slack.Slack
 com.spotify.Client
 com.valvesoftware.Steam
 org.chromium.Chromium
+org.gnome.meld
 org.videolan.VLC
-org.flameshot.Flameshot
 us.zoom.Zoom
