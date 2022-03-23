@@ -4,8 +4,11 @@ com.github.ztefn.haguichi
 com.microsoft.Teams
 com.slack.Slack
 com.spotify.Client
+com.sublimetext.three
 com.valvesoftware.Steam
+com.visualstudio.code
 org.chromium.Chromium
 org.gnome.meld
+org.gnome.TextEditor
 org.videolan.VLC
 us.zoom.Zoom
