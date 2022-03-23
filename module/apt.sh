@@ -9,9 +9,13 @@ crapware="$(cat $script_dir/config/apt-purge.txt)"
 
 # DEB software URLs
 deb_urls="https://www.vpn.net/installers/logmein-hamachi_2.1.0.203-1_amd64.deb \
-https://d2t3ff60b2tol4.cloudfront.net/builds/insync_3.4.0.40973-buster_amd64.deb \
 https://download.teamviewer.com/download/linux/teamviewer_amd64.deb \
 "
+
+# APT preparations
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35C
+codename=$(lsb_release -c | cut -d$'\t' -f2)
+echo "deb http://apt.insync.io/debian $codename non-free contrib" | sudo tee /etc/apt/sources.list.d/insync.list
 
 # Update APT cache
 echo "Updating APT cache"

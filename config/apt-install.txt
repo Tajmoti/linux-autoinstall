@@ -4,6 +4,7 @@ cmake
 curl
 flatpak
 gnome-software-plugin-flatpak
+insync
 nohang
 openjdk-17-dbg
 openjdk-17-doc
