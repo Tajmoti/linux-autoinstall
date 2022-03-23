@@ -10,5 +10,6 @@ com.visualstudio.code
 org.chromium.Chromium
 org.gnome.meld
 org.gnome.TextEditor
+org.polymc.PolyMC
 org.videolan.VLC
 us.zoom.Zoom

@@ -21,7 +21,6 @@ crapware="$(cat config/apt-purge.txt)"
 # DEB software URLs
 deb_urls="https://www.vpn.net/installers/logmein-hamachi_2.1.0.203-1_amd64.deb \
 https://d2t3ff60b2tol4.cloudfront.net/builds/insync_3.4.0.40973-buster_amd64.deb \
-https://files.multimc.org/downloads/multimc_1.5-1.deb \
 https://download.teamviewer.com/download/linux/teamviewer_amd64.deb \
 "
 
