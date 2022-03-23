@@ -1,4 +1,6 @@
 #!/bin/bash
+
+echo "Setting up ADB"
 git clone https://github.com/M0Rf30/android-udev-rules.git
 pushd android-udev-rules
 sudo cp -v 51-android.rules /etc/udev/rules.d/51-android.rules
