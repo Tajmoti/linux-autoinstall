@@ -9,8 +9,8 @@ trap clean_up EXIT
 clean_up () {
     ARG=$?
     # Cleanup
-    echo "Exited with code $ARG, cleaning up..."
     popd && rm -rf "$workdir"
+    echo "Exited with code $ARG, cleaning up..."
     exit $ARG
 }
 script_dir="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
