@@ -4,6 +4,9 @@
 cmd_wget="wget -q"
 cmd_apt="apt -qq -o=Dpkg::Use-Pty=0"
 
+# APT packages to install
+apt_packages="$(cat $script_dir/config/apt-install.txt)"
+
 # APT packages to purge
 crapware="$(cat $script_dir/config/apt-purge.txt)"
 
