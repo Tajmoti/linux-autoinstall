@@ -13,11 +13,6 @@ https://d2t3ff60b2tol4.cloudfront.net/builds/insync_3.4.0.40973-buster_amd64.deb
 https://download.teamviewer.com/download/linux/teamviewer_amd64.deb \
 "
 
-# APT preparations
-echo "Setting up APT keys and repositories"
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null 
-
 # Update APT cache
 echo "Updating APT cache"
 sudo $cmd_apt update

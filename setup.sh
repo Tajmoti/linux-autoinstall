@@ -23,7 +23,6 @@ pushd "$workdir"
 
 source "$script_dir/module/apt.sh"
 source "$script_dir/module/flatpak.sh"
-source "$script_dir/module/docker.sh"
 source "$script_dir/module/env.sh"
 source "$script_dir/module/custom-sw.sh"
 source "$script_dir/module/adb-udev.sh"
