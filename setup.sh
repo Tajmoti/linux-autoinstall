@@ -93,7 +93,7 @@ sudo groupadd docker
 sudo usermod -aG docker ${USER}
 
 echo "Setting up environment"
-souce "$script_dir/module/env.sh"
+source "$script_dir/module/env.sh"
 
 echo "Setting up ADB"
 source "$script_dir/module/adb-udev.sh"
