@@ -13,4 +13,5 @@ openjdk-17-jre
 openjdk-17-source
 opensc
 podman
+tldr
 vim
