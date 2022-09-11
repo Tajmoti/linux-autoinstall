@@ -21,6 +21,7 @@ rm -rf "$workdir"
 mkdir "$workdir"
 pushd "$workdir"
 
+source "$script_dir/module/remove-snap.sh"
 source "$script_dir/module/apt.sh"
 source "$script_dir/module/flatpak.sh"
 source "$script_dir/module/env.sh"
